@@ -53,8 +53,5 @@ namespace PxDataLoader
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
-
-
-
     }
 }
