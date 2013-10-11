@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Instat</Value>
     </Setting>
     <Setting Name="PcAxisDatabase" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=VQ01\D;Initial Catalog=pc_axic_database;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=FLORI-PC\SQLEXPRESS;Initial Catalog=PcAxisDatabase;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>
