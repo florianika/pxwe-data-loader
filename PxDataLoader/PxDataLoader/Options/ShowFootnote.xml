@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="B">Shown upon both selection and presentation</option>
+  <option code="P">Shown upon presentation</option>
+  <option code="S">shown upon selection</option> 
+</options>

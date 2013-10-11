@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="A">Both code and short text should be presented</option>
+  <option code="B">Both code and long text should be presented</option>
+  <option code="K">Value code should be presented</option>
+  <option code="S">Short value text should be presented</option>
+  <option code="T">Long value text should be presented</option>
+  <option code="V">Presentation format is taken from the column ValuePres in the table ValuePool</option>
+</options>

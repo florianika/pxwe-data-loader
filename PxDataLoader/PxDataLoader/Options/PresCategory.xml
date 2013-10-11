@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="O">Official</option>
+  <option code="I">Internal</option>
+  <option code="P">Private</option>
+</options>

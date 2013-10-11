@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="1">Official Statistics (no copyright)</option>
+  <option code="2">Unofficial Statistics (no copyright)</option>
+  <option code="3">Unofficial Statistics (copyright)</option>
+</options>

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PxDataLoader.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ProductId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Instat</Value>
+    </Setting>
+    <Setting Name="PcAxisDatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=VQ01\D;Initial Catalog=pc_axic_database;Integrated Security=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

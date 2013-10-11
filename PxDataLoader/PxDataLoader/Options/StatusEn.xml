@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="N">The table is not completely translated</option>
+  <option code="T">The table is completely translated</option>
+</options>

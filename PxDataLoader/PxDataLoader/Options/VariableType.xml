@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="V">Variable</option>
+  <option code="G">Geographical</option>
+  <option code="T">Time</option>
+</options>

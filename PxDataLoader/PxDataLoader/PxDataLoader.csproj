@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{044F8813-998B-433A-B30F-C3F30D707640}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PxDataLoader</RootNamespace>
+    <AssemblyName>PxDataLoader</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\insdtdel007\CensusCheckPublish\PxWebDataLoader\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>55F20D3E8D3EF2E49CA3D92AA50796579CDE0D4D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PxDataLoader_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChooseValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseValues.Designer.cs">
+      <DependentUpon>ChooseValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseValuset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseValuset.Designer.cs">
+      <DependentUpon>ChooseValuset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseVariable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseVariable.Designer.cs">
+      <DependentUpon>ChooseVariable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateMenuSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateMenuSelectionDialog.Designer.cs">
+      <DependentUpon>CreateMenuSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTimePeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTimePeriod.Designer.cs">
+      <DependentUpon>CreateTimePeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateValuePoolDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateValuePoolDialog.Designer.cs">
+      <DependentUpon>CreateValuePoolDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateValueSetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateValueSetDialog.Designer.cs">
+      <DependentUpon>CreateValueSetDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FootnoteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FootnoteDialog.Designer.cs">
+      <DependentUpon>FootnoteDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenericSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenericSettings.Designer.cs">
+      <DependentUpon>GenericSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import\ExcelFileWrapper.cs" />
+    <Compile Include="Import\TableBuilder.cs" />
+    <Compile Include="CreateMainTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateMainTable.Designer.cs">
+      <DependentUpon>CreateMainTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PxTimeFootnote.cs" />
+    <Compile Include="Model\PxVariableFootnote.cs" />
+    <Compile Include="Model\PxValueFootnote.cs" />
+    <Compile Include="Model\PxMainTableValueFootnote.cs" />
+    <Compile Include="Model\PxContentValueFootnote.cs" />
+    <Compile Include="Model\PxContentVariableFootnote.cs" />
+    <Compile Include="Model\PxContent.cs" />
+    <Compile Include="Model\PxContentFootnote.cs" />
+    <Compile Include="Model\PxFootnote.cs" />
+    <Compile Include="Model\PxMainTable.cs" />
+    <Compile Include="Model\PxMainTableFootnote.cs" />
+    <Compile Include="Model\PxMenuSelection.cs" />
+    <Compile Include="Model\PxObject.cs" />
+    <Compile Include="Model\PxTime.cs" />
+    <Compile Include="Model\PxValue.cs" />
+    <Compile Include="Model\PxValuePool.cs" />
+    <Compile Include="Model\PxValueSet.cs" />
+    <Compile Include="Model\PxVariable.cs" />
+    <Compile Include="Option.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VariableFacade.cs" />
+    <EmbeddedResource Include="ChooseValues.resx">
+      <DependentUpon>ChooseValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseValuset.resx">
+      <DependentUpon>ChooseValuset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseVariable.resx">
+      <DependentUpon>ChooseVariable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateMenuSelectionDialog.resx">
+      <DependentUpon>CreateMenuSelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTimePeriod.resx">
+      <DependentUpon>CreateTimePeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateValuePoolDialog.resx">
+      <DependentUpon>CreateValuePoolDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateValueSetDialog.resx">
+      <DependentUpon>CreateValueSetDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateMainTable.resx">
+      <DependentUpon>CreateMainTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FootnoteDialog.resx">
+      <DependentUpon>FootnoteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericSettings.resx">
+      <DependentUpon>GenericSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\PxDataLoader.Model.PxContent.datasource" />
+    <None Include="Properties\DataSources\PxDataLoader.Model.PxFootnote.datasource" />
+    <None Include="Properties\DataSources\PxDataLoader.Model.PxMainTable.datasource" />
+    <None Include="Properties\DataSources\PxDataLoader.Model.PxMainTableFootnote.datasource" />
+    <None Include="Properties\DataSources\PxDataLoader.Model.PxMenuSelection.datasource" />
+    <None Include="Properties\DataSources\PxDataLoader.Model.PxValuePool.datasource" />
+    <None Include="Properties\DataSources\PxDataLoader.Model.PxValueSet.datasource" />
+    <None Include="Properties\DataSources\PxDataLoader.Model.PxVariable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="PxDataLoader_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\PresCategory.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\SpecCharExists.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\StatusEn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\YesNo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\Copyright.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\StatAuthority.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\StockFA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\CFPrices.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\StoreFormat.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\VariableType.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PxMetaModel\PxMetaModel.csproj">
+      <Project>{B1FC2F37-CC03-4E24-B4C3-C1158CF62686}</Project>
+      <Name>PxMetaModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\ValuePres.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\Elimination.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\Presentation.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\MandOpt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Options\ShowFootnote.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

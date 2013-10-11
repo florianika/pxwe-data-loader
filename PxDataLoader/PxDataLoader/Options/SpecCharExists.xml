@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="Y">Yes</option>
+  <option code="E">Yes, but is not used at retrieval</option>
+  <option code="N">No</option>
+</options>
