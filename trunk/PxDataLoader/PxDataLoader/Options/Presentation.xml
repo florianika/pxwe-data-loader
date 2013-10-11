@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="A">Active, visible and can be selected</option>
+  <option code="P">Passive, is visible but cannot be selected</option>
+  <option code="N">Not shown in the menu</option>
+</options>

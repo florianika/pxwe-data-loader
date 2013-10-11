@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="C">Varchar</option>
+  <option code="I">Integer</option>
+  <option code="N">Numeric</option>
+  <option code="S">Small integer</option>
+</options>

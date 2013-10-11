@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="F">Flow</option>
+  <option code="A">Average</option>
+  <option code="S">Stock</option>
+  <option code="X">Other</option>
+</options>

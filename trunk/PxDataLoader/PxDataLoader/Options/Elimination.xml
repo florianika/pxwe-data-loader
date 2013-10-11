@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option code="N">No elimination value, i.e. the variable cannot be eliminated</option>
+  <option code="A">Elimination value is obtained by aggregation of all values in the value set</option>
+</options>
