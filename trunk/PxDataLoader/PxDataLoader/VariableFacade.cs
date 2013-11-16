@@ -760,7 +760,7 @@ namespace PxDataLoader
              return maxID;
         }
 
-        public static bool DataInsertInDb(PxMainTable mt, string excelPath, ref string message)
+        public static bool DataInsertInDb(PxMainTable mt, string excelPath, bool deleteExistingRowsFirst, ref string message)
         {
 
             if (System.IO.File.Exists(excelPath))
@@ -796,6 +796,13 @@ namespace PxDataLoader
                     foreach (DataRow row in drToRemove)
                     {
                         dt.Rows.Remove(row);
+                    }
+                    if (deleteExistingRowsFirst)
+                    {
+                        SqlCommand sc = new SqlCommand("DELTE FROM " + (mt.TableId + 1), conn);
+                        conn.Open();
+                        sc.ExecuteNonQuery();
+                        conn.Close();
                     }
                     SqlBulkCopy sbc = new SqlBulkCopy(conn);
                     sbc.DestinationTableName = mt.TableId + 1;

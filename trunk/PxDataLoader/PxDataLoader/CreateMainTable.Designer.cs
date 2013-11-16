@@ -76,10 +76,13 @@
             System.Windows.Forms.Label valueSetLabel;
             this.btnImport = new System.Windows.Forms.Button();
             this.tableIdTextBox = new System.Windows.Forms.TextBox();
+            this.pxMainTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbContents = new System.Windows.Forms.ListBox();
             this.contentTextBox = new System.Windows.Forms.TextBox();
+            this.pxContentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbVariables = new System.Windows.Forms.ListBox();
             this.variableTextBox = new System.Windows.Forms.TextBox();
+            this.pxVariableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.presTextTextBox = new System.Windows.Forms.TextBox();
             this.presTextEnglishTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -90,6 +93,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabMainTable = new System.Windows.Forms.TabPage();
+            this.rbtNotDeleteExistingRows = new System.Windows.Forms.RadioButton();
+            this.rbtDeleteAllRowsFirst = new System.Windows.Forms.RadioButton();
             this.btnAddMainTableFootnote = new System.Windows.Forms.Button();
             this.btnActivateTable = new System.Windows.Forms.Button();
             this.btnLoadData = new System.Windows.Forms.Button();
@@ -151,9 +156,6 @@
             this.valueSetLabel1 = new System.Windows.Forms.Label();
             this.variableTypeComboBox = new System.Windows.Forms.ComboBox();
             this.variableInfoTextBox = new System.Windows.Forms.TextBox();
-            this.pxMainTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pxContentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pxVariableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             tableIdLabel = new System.Windows.Forms.Label();
             contentLabel = new System.Windows.Forms.Label();
             variableLabel = new System.Windows.Forms.Label();
@@ -199,6 +201,9 @@
             variableInfoLabel = new System.Windows.Forms.Label();
             variableTypeLabel = new System.Windows.Forms.Label();
             valueSetLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pxMainTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxContentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxVariableBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -216,9 +221,6 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pxMainTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxContentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxVariableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableIdLabel
@@ -644,6 +646,10 @@
             this.tableIdTextBox.Size = new System.Drawing.Size(238, 20);
             this.tableIdTextBox.TabIndex = 23;
             // 
+            // pxMainTableBindingSource
+            // 
+            this.pxMainTableBindingSource.DataSource = typeof(PxDataLoader.Model.PxMainTable);
+            // 
             // lbContents
             // 
             this.lbContents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -664,6 +670,10 @@
             this.contentTextBox.Name = "contentTextBox";
             this.contentTextBox.Size = new System.Drawing.Size(313, 20);
             this.contentTextBox.TabIndex = 25;
+            // 
+            // pxContentBindingSource
+            // 
+            this.pxContentBindingSource.DataSource = typeof(PxDataLoader.Model.PxContent);
             // 
             // lbVariables
             // 
@@ -687,6 +697,10 @@
             this.variableTextBox.Size = new System.Drawing.Size(197, 20);
             this.variableTextBox.TabIndex = 28;
             this.variableTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.variableTextBox_Validating);
+            // 
+            // pxVariableBindingSource
+            // 
+            this.pxVariableBindingSource.DataSource = typeof(PxDataLoader.Model.PxVariable);
             // 
             // presTextTextBox
             // 
@@ -779,6 +793,8 @@
             // tabMainTable
             // 
             this.tabMainTable.AutoScroll = true;
+            this.tabMainTable.Controls.Add(this.rbtNotDeleteExistingRows);
+            this.tabMainTable.Controls.Add(this.rbtDeleteAllRowsFirst);
             this.tabMainTable.Controls.Add(this.btnAddMainTableFootnote);
             this.tabMainTable.Controls.Add(this.btnActivateTable);
             this.tabMainTable.Controls.Add(this.btnLoadData);
@@ -819,6 +835,28 @@
             this.tabMainTable.TabIndex = 0;
             this.tabMainTable.Text = "Table information";
             this.tabMainTable.UseVisualStyleBackColor = true;
+            // 
+            // rbtNotDeleteExistingRows
+            // 
+            this.rbtNotDeleteExistingRows.AutoSize = true;
+            this.rbtNotDeleteExistingRows.Location = new System.Drawing.Point(231, 438);
+            this.rbtNotDeleteExistingRows.Name = "rbtNotDeleteExistingRows";
+            this.rbtNotDeleteExistingRows.Size = new System.Drawing.Size(178, 17);
+            this.rbtNotDeleteExistingRows.TabIndex = 71;
+            this.rbtNotDeleteExistingRows.TabStop = true;
+            this.rbtNotDeleteExistingRows.Text = "Do Not Delete Any Existing Row";
+            this.rbtNotDeleteExistingRows.UseVisualStyleBackColor = true;
+            // 
+            // rbtDeleteAllRowsFirst
+            // 
+            this.rbtDeleteAllRowsFirst.AutoSize = true;
+            this.rbtDeleteAllRowsFirst.Location = new System.Drawing.Point(231, 415);
+            this.rbtDeleteAllRowsFirst.Name = "rbtDeleteAllRowsFirst";
+            this.rbtDeleteAllRowsFirst.Size = new System.Drawing.Size(147, 17);
+            this.rbtDeleteAllRowsFirst.TabIndex = 69;
+            this.rbtDeleteAllRowsFirst.TabStop = true;
+            this.rbtDeleteAllRowsFirst.Text = "Delete Existing Rows First";
+            this.rbtDeleteAllRowsFirst.UseVisualStyleBackColor = true;
             // 
             // btnAddMainTableFootnote
             // 
@@ -1528,18 +1566,6 @@
             this.variableInfoTextBox.Size = new System.Drawing.Size(197, 20);
             this.variableInfoTextBox.TabIndex = 31;
             // 
-            // pxMainTableBindingSource
-            // 
-            this.pxMainTableBindingSource.DataSource = typeof(PxDataLoader.Model.PxMainTable);
-            // 
-            // pxContentBindingSource
-            // 
-            this.pxContentBindingSource.DataSource = typeof(PxDataLoader.Model.PxContent);
-            // 
-            // pxVariableBindingSource
-            // 
-            this.pxVariableBindingSource.DataSource = typeof(PxDataLoader.Model.PxVariable);
-            // 
             // CreateMainTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1550,6 +1576,9 @@
             this.Controls.Add(this.panel1);
             this.Name = "CreateMainTable";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pxMainTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxContentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxVariableBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1571,9 +1600,6 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pxMainTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxContentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxVariableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1660,6 +1686,8 @@
         private System.Windows.Forms.LinkLabel llAddFootnoteInSelectedVariable;
         private System.Windows.Forms.LinkLabel llAddFootnoteInSelectedVariableForSelectedContent;
         private System.Windows.Forms.TextBox txbExcelPath;
+        private System.Windows.Forms.RadioButton rbtDeleteAllRowsFirst;
+        private System.Windows.Forms.RadioButton rbtNotDeleteExistingRows;
     }
 }
 
