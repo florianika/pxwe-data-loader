@@ -17,6 +17,8 @@ namespace PxDataLoader
 
         public int FootnoteNo { get; set; }
 
+        private PxMainTable _table;
+
         public CreateMainTable()
         {
             InitializeComponent();
@@ -59,7 +61,7 @@ namespace PxDataLoader
             }
         }
 
-        private PxMainTable _table;
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -445,7 +447,7 @@ namespace PxDataLoader
         {
             string msg = "";
 
-            if (!VariableFacade.DataInsertInDb(_table, fileName, ref msg))
+            if (!VariableFacade.DataInsertInDb(_table, fileName, rbtDeleteAllRowsFirst.Checked, ref msg))
             {
                 MessageBox.Show(msg);
 
@@ -722,6 +724,8 @@ namespace PxDataLoader
 
         }
 
+        
+     
 
 
 
